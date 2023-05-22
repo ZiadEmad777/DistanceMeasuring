@@ -1,0 +1,36 @@
+23:17:33 **** Incremental Build of configuration Debug for project Distance_Measuring2 ****
+make all 
+Building file: ../ultrasonic.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"ultrasonic.d" -MT"ultrasonic.o" -c -o "ultrasonic.o" "../ultrasonic.c"
+In file included from ../ultrasonic.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../ultrasonic.c
+ 
+Building target: Distance_Measuring2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Distance_Measuring2.map -mmcu=atmega32 -o "Distance_Measuring2.elf"  ./APP.o ./gpio.o ./icu.o ./lcd.o ./ultrasonic.o   
+Finished building target: Distance_Measuring2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Distance_Measuring2.elf  >"Distance_Measuring2.lss"
+Finished building: Distance_Measuring2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Distance_Measuring2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10416 bytes (31.8% Full)
+(.text + .data + .bootloader)
+
+Data:        285 bytes (13.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+23:17:34 Build Finished. 0 errors, 1 warnings. (took 900ms)
+
